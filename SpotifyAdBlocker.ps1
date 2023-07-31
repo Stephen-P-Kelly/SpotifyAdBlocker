@@ -7,7 +7,7 @@ $authBaseUrl = "https://accounts.spotify.com"
 $apiBaseUrl = "https://api.spotify.com/v1"
 
 # Redirect URI used in your Spotify application settings
-$redirectUri = "http://localhost:3000" # Update if needed
+$redirectUri = "http://localhost:3000"
 
 # Scopes needed for the API call
 $scope = "user-read-currently-playing"
@@ -43,7 +43,7 @@ try {
 
     # Stop the specific Microsoft Edge process by its PID
     Start-Sleep -Seconds 1
-    $specificEdgeProcess.CloseMainWindow()
+    $specificEdgeProcess.CloseMainWindow() | Out-Null
 
     # Exchange the authorization code for an access token
     $tokenUrl = "$authBaseUrl/api/token"
